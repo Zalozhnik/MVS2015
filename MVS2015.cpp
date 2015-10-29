@@ -2,29 +2,40 @@
 //
 #include "stdafx.h"
 #include <iostream>
-#include <string> 
 
-using namespace std;
-
-struct MYSTUCTURE
-{
-	string sName;
-	int iAdge;
-};
 
 int main()	
 {
-	MYSTUCTURE MyStructure;
 	
-	cout << "Please enter first name\n";
-	cin >> MyStructure.sName;
-	cout << "Please enter the number of years\n";
-	cin >> MyStructure.iAdge;
-	cout << "My Name is ";
-	cout << MyStructure.sName;
-	cout << " and I am ";
-	cout << MyStructure.iAdge;
-	cout << " years old.\n";
+
+	int iRedToe = 0;
+	int iBlueToe = 0;
+	int iResultDayDifferentToe = 0;
+	int iResultDaySameToe = 0;
+	
+	std::cin >> iRedToe >> iBlueToe;
+	
+	if (iBlueToe == 0)
+	{
+		iResultDayDifferentToe = 0;
+		iResultDaySameToe = (iRedToe  / 2);
+		std::cout << iResultDayDifferentToe << " " << iResultDaySameToe;
+	}
+	else
+	{
+		if (iRedToe / iBlueToe > 0)
+		{
+			iResultDayDifferentToe = iBlueToe;
+			iResultDaySameToe = ((iRedToe - iResultDayDifferentToe) / 2);
+			std::cout << iResultDayDifferentToe << " " << iResultDaySameToe;
+		}
+		else {
+			iResultDayDifferentToe = iRedToe;
+			iResultDaySameToe = ((iBlueToe - iResultDayDifferentToe) / 2);
+			std::cout << iResultDayDifferentToe << " " << iResultDaySameToe;
+		}
+	}
+	
 
 	system("pause");
 	return 0;

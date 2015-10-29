@@ -2,23 +2,29 @@
 //
 #include "stdafx.h"
 #include <iostream>
+#include <string> 
 
 using namespace std;
 
-int main()
+struct MYSTUCTURE
 {
-	int Num1;
-	int Num2;
-	int result;
-	int* pNum1;
-	int* pNum2;
-	Num1 = 2;
-	Num2 = 3;
-	pNum1 = &Num1;
-	pNum2 = &Num2;
-	result = *pNum1 + *pNum2;
-	cout << "The Result is = ";
-	cout << result << endl;
+	string sName;
+	int iAdge;
+};
+
+int main()	
+{
+	MYSTUCTURE MyStructure;
+	
+	cout << "Please enter first name\n";
+	cin >> MyStructure.sName;
+	cout << "Please enter the number of years\n";
+	cin >> MyStructure.iAdge;
+	cout << "My Name is ";
+	cout << MyStructure.sName;
+	cout << " and I am ";
+	cout << MyStructure.iAdge;
+	cout << " years old.\n";
 
 	system("pause");
 	return 0;

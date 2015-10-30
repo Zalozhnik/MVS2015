@@ -2,23 +2,27 @@
 //
 #include "stdafx.h"
 #include <iostream>
-#include <math.h>
-#include <iomanip>
-
 
 int main()	
 {
-	double n, m, a;
-	long double result;
+	int iWeight;
+	std::cin >> iWeight;
 
-	std::cin >> n >> m >> a;
+	if (iWeight != 2)
+	{
+		if (iWeight % 2 == 0)
+		{
+			std::cout << "YES";
+		}
+		else {
+			std::cout << "NO";
+		}
+	}
+	else
+	{
+		std::cout << "NO";
+	}
 
-	result = ceil(n / a) * ceil(m / a);
-	
-	std::cout.setf(std::ios_base::fixed);
-
-	std::cout << std::setprecision(0) << result;
-	
 	system("pause");
 	return 0;
 }

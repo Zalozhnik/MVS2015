@@ -2,42 +2,25 @@
 //
 #include "stdafx.h"
 #include <iostream>
+#include <math.h>
+#include <iomanip>
 
 
 int main()	
 {
-	
+	double n, m, a;
+	long double result;
 
-	int iRedToe = 0;
-	int iBlueToe = 0;
-	int iResultDayDifferentToe = 0;
-	int iResultDaySameToe = 0;
-	
-	std::cin >> iRedToe >> iBlueToe;
-	
-	if (iBlueToe == 0)
-	{
-		iResultDayDifferentToe = 0;
-		iResultDaySameToe = (iRedToe  / 2);
-		std::cout << iResultDayDifferentToe << " " << iResultDaySameToe;
-	}
-	else
-	{
-		if (iRedToe / iBlueToe > 0)
-		{
-			iResultDayDifferentToe = iBlueToe;
-			iResultDaySameToe = ((iRedToe - iResultDayDifferentToe) / 2);
-			std::cout << iResultDayDifferentToe << " " << iResultDaySameToe;
-		}
-		else {
-			iResultDayDifferentToe = iRedToe;
-			iResultDaySameToe = ((iBlueToe - iResultDayDifferentToe) / 2);
-			std::cout << iResultDayDifferentToe << " " << iResultDaySameToe;
-		}
-	}
-	
+	std::cin >> n >> m >> a;
 
+	result = ceil(n / a) * ceil(m / a);
+	
+	std::cout.setf(std::ios_base::fixed);
+
+	std::cout << std::setprecision(0) << result;
+	
 	system("pause");
 	return 0;
 }
+
 

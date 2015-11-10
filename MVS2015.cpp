@@ -2,26 +2,31 @@
 //
 #include "stdafx.h"
 #include <iostream>
+#include <string>
+
+using std::cin;
+using std::cout;
+using std::string;
 
 int main()	
 {
-	int iWeight;
-	std::cin >> iWeight;
+	int n;
+	int count = 0;
+	string s;
 
-	if (iWeight != 2)
+	cin >> n;
+	cin >> s;
+
+	
+	for (int i(0); i < n; i++)
 	{
-		if (iWeight % 2 == 0)
+		if(s[i+1] == s[i])
 		{
-			std::cout << "YES";
-		}
-		else {
-			std::cout << "NO";
+				count++;
 		}
 	}
-	else
-	{
-		std::cout << "NO";
-	}
+	
+	cout << count;
 
 	system("pause");
 	return 0;

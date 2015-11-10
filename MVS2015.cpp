@@ -10,23 +10,25 @@ using std::string;
 
 int main()	
 {
-	int n;
-	int count = 0;
+	bool flags = false;
 	string s;
 
-	cin >> n;
 	cin >> s;
 
 	
-	for (int i(0); i < n; i++)
+	for (int i(0); i < s.size(); i++)
 	{
-		if(s[i+1] == s[i])
+		if (s[i] == s[i + 1] && s[i] == s[i + 2] && s[i] == s[i + 3] && s[i] == s[i + 4] && s[i] == s[i + 5] && s[i] == s[i + 6])
 		{
-				count++;
+			flags = true;
 		}
+
 	}
-	
-	cout << count;
+
+	if (flags)
+		cout << "YES";
+	else
+		cout << "NO";
 
 	system("pause");
 	return 0;
